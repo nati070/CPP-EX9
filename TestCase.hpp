@@ -8,7 +8,6 @@ using namespace std;
 
 struct TestCase{
     
-
     string nameCheck;
     ostream& os_err;
     int success = 0;
@@ -26,7 +25,7 @@ struct TestCase{
     }
     else{
         fails++;
-        cout<< nameCheck << ": Failure in test #" << success + fails << ": " << a << " should equal " << b << "!" << endl;
+        os_err<< nameCheck << ": Failure in test #" << success + fails << ": " << a << " should equal " << b << "!" << endl;
     }  
     
     return (*this);
@@ -40,7 +39,7 @@ struct TestCase{
     }
     else{
         fails++;
-       	cout<< nameCheck  <<": Failure in test #"<< success + fails<<": "<< a << " should differ than " << b <<"!" << endl;
+       	os_err<< nameCheck  <<": Failure in test #"<< success + fails<<": "<< a << " should differ than " << b <<"!" << endl;
     }
     
     return (*this);
@@ -52,7 +51,7 @@ struct TestCase{
     }
     else{
         fails++;
-        	cout<< nameCheck <<": Failure in test #"<< success + fails<<": Function should return "<< b <<" but returned "<< f(a) << "!" <<endl;
+        	os_err<< nameCheck <<": Failure in test #"<< success + fails<<": Function should return "<< b <<" but returned "<< f(a) << "!" <<endl;
     }
 
     return (*this);
@@ -69,7 +68,7 @@ struct TestCase{
     }
     else{
       fails++;
-      cout<< nameCheck <<": Failure in test #"<< success + fails <<": string value should be "<< s <<" but is "<< stra << endl;
+      os_err<< nameCheck <<": Failure in test #"<< success + fails <<": string value should be "<< s <<" but is "<< stra << endl;
     }
     
     return (*this);
