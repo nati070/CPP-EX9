@@ -40,7 +40,7 @@ struct TestCase{
     }
     else{
         fails++;
-       	cout<< nameCheck  <<": Failure in test #"<< success + fails<<": "<< a << " is equal " << b <<"!" << endl;
+       	cout<< nameCheck  <<": Failure in test #"<< success + fails<<": "<< a << " should differ than " << b <<"!" << endl;
     }
     
     return (*this);
