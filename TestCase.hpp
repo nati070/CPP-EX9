@@ -26,7 +26,7 @@ struct TestCase{
     }
     else{
         fails++;
-        cout<< nameCheck << ": Failure in test #" << success + fails << " " << a << " should equal " << b << "!" << endl;
+        cout<< nameCheck << ": Failure in test #" << success + fails << ": " << a << " should equal " << b << "!" << endl;
     }  
     
     return (*this);
@@ -40,7 +40,7 @@ struct TestCase{
     }
     else{
         fails++;
-       	cout<< nameCheck  <<": Failure in test #"<< success + fails<<" "<< a << " is equal " << b <<"!" << endl;
+       	cout<< nameCheck  <<": Failure in test #"<< success + fails<<": "<< a << " is equal " << b <<"!" << endl;
     }
     
     return (*this);
@@ -52,7 +52,7 @@ struct TestCase{
     }
     else{
         fails++;
-        	cout<< nameCheck <<": Failure in test #"<< success + fails<<" Function should return "<< b <<" but returned "<< f(a) << "!" <<endl;
+        	cout<< nameCheck <<": Failure in test #"<< success + fails<<": Function should return "<< b <<" but returned "<< f(a) << "!" <<endl;
     }
 
     return (*this);
@@ -69,14 +69,11 @@ struct TestCase{
     }
     else{
       fails++;
-      cout<< nameCheck <<": Failure in test #"<< success + fails <<" string value should be "<< s <<" but is "<< stra << endl;
+      cout<< nameCheck <<": Failure in test #"<< success + fails <<": string value should be "<< s <<" but is "<< stra << endl;
     }
     
     return (*this);
     }
-    
-
-
     TestCase& print();  // declertion on function print
  
 };
