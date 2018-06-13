@@ -48,7 +48,7 @@ int getNum(const MyStruct& s) {
 }
 
 ostream& operator<< (ostream& out, const MyStruct& tc) {
-	return (out << "MyStrct"<<"("<<tc.num<<")"); // a deliberate typo (forgot "u").
+	return (out << "MyStruct"<<"("<<tc.num<<")"); // a deliberate typo (forgot "u").
 }
 
 int main() {
